@@ -1,0 +1,246 @@
+@font-face {
+    font-family: HankenGrotesk;
+    src:  url(../fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: HankenGroteskBold;
+    src:  url(../fonts/static/HankenGrotesk-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: HankenGrotesk;
+    color: white;
+}
+
+body #wrapper-block {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8%;
+    box-shadow: 10px 10px 21px -4px rgba(155, 168, 190, 0.267);
+}
+
+body #wrapper-block #Result {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 8%;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom, 
+    hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+body #wrapper-block #Result #yourResult {
+    font-size: 1.5rem;
+    opacity: 70%;
+    margin-bottom: 1rem;
+}
+
+body #wrapper-block #Result #circle {
+    width: 70%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: HankenGroteskBold;
+    background-image: linear-gradient(to top, 
+    hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
+}
+
+body #wrapper-block #Result #circle #yourScore {
+    font-size: 4rem;
+}
+
+body #wrapper-block #Result #circle #maxScore {
+    opacity: 40%;
+}
+
+body #wrapper-block #Result #Great {
+    font-size: 2rem;
+}
+
+body #wrapper-block #Result #statistic {
+    opacity: 70%;
+}
+
+body #wrapper-block #Summary {
+    width: 50%;
+    display: flex;
+    align-items: start;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 8%;
+    padding: 2rem;
+    gap: 1.5rem;
+    color: black;
+}
+
+body #wrapper-block #Summary #yourSummary {
+    font-size: 1.5rem;
+    font-family: HankenGroteskBold;
+}
+
+body #wrapper-block #Summary #stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+body #wrapper-block #Summary #stats .stats {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    font-family: HankenGroteskBold;
+    border-radius: 12px;
+}
+
+body #wrapper-block #Summary #stats .stats .div1 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+body #wrapper-block #Summary #stats .stats .div2 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 1rem;
+}
+
+body #wrapper-block #Summary #stats #reaction{
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 0.07);
+}
+
+body #wrapper-block #Summary #stats #reaction .div2 {
+    color: black;
+}
+
+body #wrapper-block #Summary #stats #memory{
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 0.07);
+}
+
+body #wrapper-block #Summary #stats #memory .div2 {
+    color: black;
+}
+
+body #wrapper-block #Summary #stats #verbal{
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 0.07);
+}
+
+body #wrapper-block #Summary #stats #verbal .div2 {
+    color: black;
+}
+
+body #wrapper-block #Summary #stats #visual{
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 0.07);
+}
+
+body #wrapper-block #Summary #stats #visual .div2 {
+    color: black;
+}
+
+body #wrapper-block #Summary #stats .div2 .p2{
+    opacity: 50%;
+}
+
+body #wrapper-block #Summary button {
+    width: 100%;
+    height: 3rem;
+    border-radius: 25px;
+    background-color: hsl(241, 81%, 54%);
+    color: white;
+    cursor: pointer;
+}
+
+body #wrapper-block #Summary button:hover{
+    background-color: hsl(224, 30%, 27%);
+}
+
+@media screen and (max-width: 375px){
+    body {
+        width: 375px;
+        height: 812px;
+    }
+
+    body #wrapper-block {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body #wrapper-block #Result {
+        width: 83%;
+        height: 40%;
+        border-radius: 0 0 8% 8%;
+        display: flex;
+        gap: 1rem;
+    }
+
+    body #wrapper-block #Result #circle{
+        width: 150px;
+        height: 150px;
+    }
+
+    body #wrapper-block #Result #yourResult {
+        margin: 0;
+    }
+
+    body #wrapper-block #Result #circle #yourScore {
+        font-size: 3.5rem;
+    }
+
+    body #wrapper-block #Result #Great{
+        font-family: HankenGroteskBold;
+        font-size: 1.4rem;
+    }
+
+    body #wrapper-block #Result #statistic {
+        padding: 0 1rem;
+    }
+
+    body #wrapper-block #Summary {
+        width: 83%;
+        height: 60%;
+        padding: 2rem;
+    }
+
+    body #wrapper-block #Summary #yourSummary {
+        font-size: 1.5rem;
+    }
+
+    body #wrapper-block #Summary #stats .stats {
+        height: 3.5rem;
+    }
+}
