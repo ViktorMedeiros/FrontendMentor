@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Interactive rating component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="./assets/styles/thankYou.css">
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <div id="wrapper-block">
+    <div id="star-icon">
+      <div class="background">
+          <img src="./assets/images/icon-star.svg" alt="StarIcon">
+      </div>
+    </div>
+  
+    <div id="question">
+      <p>How did we do?</p>
+    </div>
+  
+    <div id="pleaseRateUs">
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+      </p>
+    </div>
+
+    <div id="oneToFive">
+      <div class="background" data-value="1">
+        <span>1</span>
+      </div>
+      <div class="background" data-value="2">
+        <span>2</span>
+      </div>
+      <div class="background" data-value="3">
+        <span>3</span>
+      </div>
+
+      <div class="background" data-value="4">
+        <span>4</span>
+      </div>
+
+      <div class="background" data-value="5">
+        <span>5</span>
+      </div>
+    </div>
+
+    <div id="submitButton">
+      <button onclick="submitRating()">
+        SUBMIT
+      </button>
+    </div>
+  </div>
+
+  <div id="wrapper-thankYou">
+    <div id="image">
+      <img src="./assets/images/illustration-thank-you.svg" alt="Payment Icon">
+    </div>
+
+    <div id="youSelected">
+      <p>You selected <span id="selectedRating"><p>&nbsp;out of 5</p>
+    </div>
+
+    <div id="thankYou">
+      <p>Thank you!</p>
+    </div>
+
+    <div id="text"><p>
+      We appreciate you taking the time to give a rating.
+      If you ever need more support, don't hesitate to get in touch!
+    </p></div>
+  </div>
+</body>
