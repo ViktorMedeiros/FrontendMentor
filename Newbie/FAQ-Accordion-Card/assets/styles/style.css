@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, 
+    hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-family: "Kumbh Sans";
+}
+
+main {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#wrapper-image {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#hidden {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#hidden img {
+    position: absolute;
+}
+
+#hidden #shadow {
+    right: 170px;
+    bottom: -100px;
+}
+
+#hidden #woman {
+    width: 90%;
+    right: 170px;
+    bottom: 100px;
+}
+
+#box {
+    width: 35%;
+    position: absolute;
+    left: -123px;
+    top: 275px;
+}
+
+
+#wrapper-FAQ {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    font-size: 1.2rem;
+}
+#wrapper-FAQ #FAQ {
+    width: 10%;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#wrapper-FAQ #questions {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#wrapper-FAQ #questions .question {
+    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px hsl(240, 5%, 85%);
+    transition: height 1s ease;
+}
+
+#wrapper-FAQ #questions .question .questionBox {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#wrapper-FAQ #questions .question .questionBox p:hover {
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+#wrapper-FAQ #questions .question .questionBox img {
+    width: 15px;
+    height: 10px;
+}
+
+#wrapper-FAQ #questions .question.active {
+    height: auto;
+    display: flex;
+    gap: 1rem;
+    border-bottom: solid 1px hsl(240, 5%, 85%);
+}
+
+#wrapper-FAQ #questions .question.active .questionBox {
+    font-weight: 700;
+}
+
+.questionBox img {
+    transition: transform 0.5s;
+}
+.question.active .questionBox img {
+    transform: rotate(180deg);
+}
+.questionBox.rotate img {
+    transform: rotate(0deg);
+}
+
+
+#wrapper-FAQ #questions .question .answer {
+    width: 95%;
+    display: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 375px) {
+    main {
+        width: 90%;
+        height: 65%;
+        display: flex;
+        flex-direction: column;        
+    }
+
+    #wrapper-image {
+        width: 100%;
+        height: 20%;
+        position: relative;
+    }
+    
+    #wrapper-image #hidden {
+        width: 100%;
+        position: relative;
+        overflow: visible;
+    }
+
+    #hidden img {
+        position: absolute;
+    }
+
+    #hidden #shadow {
+        width: 75%;
+        right: 40px;
+        top: -140px;
+    }
+
+    #hidden #woman {
+        width: 75%;
+        right: 40px;
+        top: -115px;
+    }
+
+    #box {
+        position: absolute;
+        width: 30%;
+        left: 35px;
+        top: -43px;
+    }
+
+
+
+    #wrapper-FAQ {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: sp;
+        font-size: 14px;
+        gap: 1.5rem;
+    }
+
+    #wrapper-FAQ #FAQ {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #wrapper-FAQ #questions {
+        width: 85%;
+        gap: 0.5rem;
+    }
+
+    #wrapper-FAQ #questions .question .questionBox img {
+        width: 10px;
+        height: 6px;
+    }
+
+    #wrapper-FAQ #questions .question.active {
+        height: auto;
+        gap: 0.5rem;
+    }
+
+    #wrapper-FAQ #questions .question .answer {
+        width: 90%;
+        font-size: 13px;
+    }
+}
